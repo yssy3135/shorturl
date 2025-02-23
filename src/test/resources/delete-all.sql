@@ -1,0 +1,1 @@
+delete from `short_url` where 1;

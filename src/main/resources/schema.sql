@@ -1,8 +1,10 @@
-DROP TABLE IF EXISTS Member;
-
-create table Member
+DROP TABLE IF EXISTS short_url;
+create table short_url
 (
-    id integer not null,
-    name varchar(255) not null,
-    primary key (id)
+    id            BIGINT auto_increment primary key,
+    created_at    TIMESTAMP,
+    request_count BIGINT,
+    original    VARCHAR(255),
+    shorten     VARCHAR(255)
 );
+

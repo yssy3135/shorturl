@@ -1,13 +1,22 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:lg-test
-    username: lg
-    password: laundryGo!
+    url: jdbc:h2:tcp://localhost/~/testlg;MODE=MySQL
+    #    url: jdbc:h2:mem:lg
+#    username: lg
+    username: sa
+#    password: laundryGo!
+    password: 1234
     hikari:
       maximum-pool-size: 4
   h2:
     console:
       enabled: true
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
 mybatis:
   mapper-locations: mapper/*.xml
   configuration:
@@ -16,3 +25,6 @@ logging:
   level:
     root: info
     com.laundrygo.shorturl.repository: debug
+
+shorturl:
+  baseurl: localhost:8080
