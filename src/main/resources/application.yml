@@ -1,11 +1,8 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/testlg;MODE=MySQL
-    #    url: jdbc:h2:mem:lg
-#    username: lg
-    username: sa
-#    password: laundryGo!
-    password: 1234
+    url: jdbc:h2:mem:lg
+    username: lg
+    password: laundryGo!
     hikari:
       maximum-pool-size: 4
   h2:
